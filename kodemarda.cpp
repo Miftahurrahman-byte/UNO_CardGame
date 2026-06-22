@@ -1,5 +1,18 @@
 while (sisapemain > 1)
     {
+        cout << "\033[2J\033[1;1H";
+
+        cout << "=========================================\n";
+        cout << "STATUS MEJA SAAT INI:\n";
+        cetakKartuMeja(warnasekarang, angkasekarang);
+        cout << "Warna Main   : \033[1m" << getWarnaKode(warnasekarang) << warnasekarang << "\033[0m\n";
+        cout << "Arah Putaran : " << (arahmain ? "Searah Jarum Jam ->" : "<- Berlawanan Jarum Jam") << "\n";
+        cout << "Sisa pemain aktif: " << sisapemain << "\n";
+        cout << "=========================================\n";
+        cout << "\nGILIRAN SEKARANG: \033[1;32m" << daftarpemain[giliran].namapemain << "\033[0m\n\n";
+
+        ditangan(&daftarpemain[giliran]);
+
         int pilih;
         cout << "\nPilih nomor kartu yang ingin diletakkan: ";
         cin >> pilih;
@@ -88,4 +101,3 @@ while (sisapemain > 1)
 
                 warnasekarang = kartudipilih.warna;
                 angkasekarang = kartudipilih.angka;
-
