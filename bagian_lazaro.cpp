@@ -22,7 +22,7 @@ uno ambilkartu()
             kartuambil[acak] = temp;
         }
     }
-    sisakartuambil--;
+    sisakartuambil--;   
     return kartuambil[sisakartuambil];
 }
 
