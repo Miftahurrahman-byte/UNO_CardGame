@@ -38,4 +38,10 @@
 
 ---
 
+1. Clone repository ini ke komputer kamu.
+2. Pastikan kamu memiliki compiler C++ (seperti `g++`).
+3. Compile program utama dengan perintah:
+```bash
+   g++ "Shuffle Dek.cpp" -o UnoGame
+
 
