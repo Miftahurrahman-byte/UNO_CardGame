@@ -45,41 +45,101 @@ void isiASCII(string n, string ascii[])
 {
     if (n == "0")
     {
-        ascii[0] = "  #######  "; ascii[1] = " ##     ## "; ascii[2] = " ##     ## "; ascii[3] = " ##     ## "; ascii[4] = " ##     ## "; ascii[5] = " ##     ## "; ascii[6] = "  #######  ";
+        ascii[0] = "  #######  ";
+        ascii[1] = " ##     ## ";
+        ascii[2] = " ##     ## ";
+        ascii[3] = " ##     ## ";
+        ascii[4] = " ##     ## ";
+        ascii[5] = " ##     ## ";
+        ascii[6] = "  #######  ";
     }
     else if (n == "1")
     {
-        ascii[0] = "     ##    "; ascii[1] = "    ###    "; ascii[2] = "   ####    "; ascii[3] = "     ##    "; ascii[4] = "     ##    "; ascii[5] = "     ##    "; ascii[6] = "   ######  ";
+        ascii[0] = "     ##    ";
+        ascii[1] = "    ###    ";
+        ascii[2] = "   ####    ";
+        ascii[3] = "     ##    ";
+        ascii[4] = "     ##    ";
+        ascii[5] = "     ##    ";
+        ascii[6] = "   ######  ";
     }
     else if (n == "2")
     {
-        ascii[0] = "  #######  "; ascii[1] = "        ## "; ascii[2] = "        ## "; ascii[3] = "  #######  "; ascii[4] = "  ##       "; ascii[5] = "  ##       "; ascii[6] = "  #######  ";
+        ascii[0] = "  #######  ";
+        ascii[1] = "        ## ";
+        ascii[2] = "        ## ";
+        ascii[3] = "  #######  ";
+        ascii[4] = "  ##       ";
+        ascii[5] = "  ##       ";
+        ascii[6] = "  #######  ";
     }
     else if (n == "3")
     {
-        ascii[0] = "  #######  "; ascii[1] = "        ## "; ascii[2] = "        ## "; ascii[3] = "  #######  "; ascii[4] = "        ## "; ascii[5] = "        ## "; ascii[6] = "  #######  ";
+        ascii[0] = "  #######  ";
+        ascii[1] = "        ## ";
+        ascii[2] = "        ## ";
+        ascii[3] = "  #######  ";
+        ascii[4] = "        ## ";
+        ascii[5] = "        ## ";
+        ascii[6] = "  #######  ";
     }
     else if (n == "4")
     {
-        ascii[0] = "  ##   ##  "; ascii[1] = "  ##   ##  "; ascii[2] = "  ##   ##  "; ascii[3] = "  #######  "; ascii[4] = "       ##  "; ascii[5] = "       ##  "; ascii[6] = "       ##  ";
+        ascii[0] = "  ##   ##  ";
+        ascii[1] = "  ##   ##  ";
+        ascii[2] = "  ##   ##  ";
+        ascii[3] = "  #######  ";
+        ascii[4] = "       ##  ";
+        ascii[5] = "       ##  ";
+        ascii[6] = "       ##  ";
     }
     else if (n == "5")
     {
-        ascii[0] = "  #######  "; ascii[1] = "  ##       "; ascii[2] = "  ##       "; ascii[3] = "  #######  "; ascii[4] = "        ## "; ascii[5] = "        ## "; ascii[6] = "  #######  ";
+        ascii[0] = "  #######  ";
+        ascii[1] = "  ##       ";
+        ascii[2] = "  ##       ";
+        ascii[3] = "  #######  ";
+        ascii[4] = "        ## ";
+        ascii[5] = "        ## ";
+        ascii[6] = "  #######  ";
     }
     else if (n == "6")
     {
-        ascii[0] = "  #######  "; ascii[1] = "  ##       "; ascii[2] = "  ##       "; ascii[3] = "  #######  "; ascii[4] = "  ##   ##  "; ascii[5] = "  ##   ##  "; ascii[6] = "  #######  ";
+        ascii[0] = "  #######  ";
+        ascii[1] = "  ##       ";
+        ascii[2] = "  ##       ";
+        ascii[3] = "  #######  ";
+        ascii[4] = "  ##   ##  ";
+        ascii[5] = "  ##   ##  ";
+        ascii[6] = "  #######  ";
     }
     else if (n == "7")
     {
-        ascii[0] = "###########"; ascii[1] = "         ##"; ascii[2] = "        ## "; ascii[3] = "       ##  "; ascii[4] = "      ##   "; ascii[5] = "     ##    "; ascii[6] = "    ##     ";
+        ascii[0] = "###########";
+        ascii[1] = "         ##";
+        ascii[2] = "        ## ";
+        ascii[3] = "       ##  ";
+        ascii[4] = "      ##   ";
+        ascii[5] = "     ##    ";
+        ascii[6] = "    ##     ";
     }
     else if (n == "8")
     {
-        ascii[0] = "   #####   "; ascii[1] = "  ##   ##  "; ascii[2] = "  ##   ##  "; ascii[3] = "   #####   "; ascii[4] = "  ##   ##  "; ascii[5] = "  ##   ##  "; ascii[6] = "   #####   ";
+        ascii[0] = "   #####   ";
+        ascii[1] = "  ##   ##  ";
+        ascii[2] = "  ##   ##  ";
+        ascii[3] = "   #####   ";
+        ascii[4] = "  ##   ##  ";
+        ascii[5] = "  ##   ##  ";
+        ascii[6] = "   #####   ";
     }
     else if (n == "9")
     {
-        ascii[0] = "  #######  "; ascii[1] = " ##     ## "; ascii[2] = " ##     ## "; ascii[3] = "  #######  "; ascii[4] = "        ## "; ascii[5] = "        ## "; ascii[6] = "  #######  ";
+        ascii[0] = "  #######  ";
+        ascii[1] = " ##     ## ";
+        ascii[2] = " ##     ## ";
+        ascii[3] = "  #######  ";
+        ascii[4] = "        ## ";
+        ascii[5] = "        ## ";
+        ascii[6] = "  #######  ";
     }
