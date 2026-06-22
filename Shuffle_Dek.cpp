@@ -4,6 +4,8 @@
 #include <string>
 #include <algorithm>
 
+using namespace std;
+
 struct uno
 {
     string warna;
