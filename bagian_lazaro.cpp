@@ -1,3 +1,31 @@
+uno ambilkartu()
+{
+    if (sisakartuambil == 0)
+    {
+        cout << "\n[SISTEM] Dek habis! Mengambil dari tumpukan buang.\n";
+        uno kartuTeratas = kartuyangdibuang[jumlahkartubuang - 1];
+
+        for (int i = 0; i < jumlahkartubuang - 1; i++)
+        {
+            kartuambil[i] = kartuyangdibuang[i];
+        }
+        sisakartuambil = jumlahkartubuang - 1;
+
+        kartuyangdibuang[0] = kartuTeratas;
+        jumlahkartubuang = 1;
+
+        for (int i = 0; i < sisakartuambil; i++)
+        {
+            int acak = rand() % sisakartuambil;
+            uno temp = kartuambil[i];
+            kartuambil[i] = kartuambil[acak];
+            kartuambil[acak] = temp;
+        }
+    }
+    sisakartuambil--;
+    return kartuambil[sisakartuambil];
+}
+
 string getWarnaKode(string w)
 {
     if (w == "Red")
@@ -55,107 +83,3 @@ void isiASCII(string n, string ascii[])
     {
         ascii[0] = "  #######  "; ascii[1] = " ##     ## "; ascii[2] = " ##     ## "; ascii[3] = "  #######  "; ascii[4] = "        ## "; ascii[5] = "        ## "; ascii[6] = "  #######  ";
     }
-    else if (n == "Skip")
-    {
-        ascii[0] = "  #######  "; ascii[1] = " ##    /## "; ascii[2] = " ##   / ## "; ascii[3] = " ##  /  ## "; ascii[4] = " ## /   ## "; ascii[5] = " ##/    ## "; ascii[6] = "  #######  ";
-    }
-    else if (n == "Reverse")
-    {
-        ascii[0] = " #######   "; ascii[1] = " ##    ##  "; ascii[2] = " ##    ##  "; ascii[3] = " #######   "; ascii[4] = " ##  ##    "; ascii[5] = " ##   ##   "; ascii[6] = " ##    ##  ";
-    }
-    else if (n == "Draw Two")
-    {
-        ascii[0] = "           "; ascii[1] = "  #   #### "; ascii[2] = " ###     # "; ascii[3] = "  #   #### "; ascii[4] = "      #    "; ascii[5] = "      #### "; ascii[6] = "           ";
-    }
-    else if (n == "Wild Draw4")
-    {
-        ascii[0] = "           "; ascii[1] = "  #   #  # "; ascii[2] = " ###  #  # "; ascii[3] = "  #   #### "; ascii[4] = "         # "; ascii[5] = "         # "; ascii[6] = "           ";
-    }
-    else if (n == "Wild")
-    {
-        ascii[0] = " #        # "; ascii[1] = " #        # "; ascii[2] = " #    #   # "; ascii[3] = " #   ###  # "; ascii[4] = " # ## ## # "; ascii[5] = " ###   ### "; ascii[6] = " #        # ";
-    }
-    else
-    {
-        for (int i = 0; i < 7; i++)
-            ascii[i] = "           ";
-    }
-}
-
-void cetakKartuMeja(string w, string n)
-{
-    string kode = getWarnaKode(w);
-    string ascii[7];
-    isiASCII(n, ascii);
-
-    cout << "++=============++\n";
-    cout << "||              ||\n";
-    for (int i = 0; i < 7; i++)
-    {
-        cout << "|| " << kode << ascii[i] << "\033[0m ||\n";
-    }
-    cout << "||              ||\n";
-    cout << "++=============++\n";
-}
-
-int main()
-{
-    srand(time(0));
-
-    cout << "\033[1;36m";
-    cout << "=========================================\n";
-    cout << "        SELAMAT DATANG DI GAME UNO C++     \n";
-    cout << "=========================================\n";
-    cout << "\033[0m";
-
-    cout << "Masukkan jumlah pemain (2-10): ";
-    cin >> totalpemain;
-
-    while (totalpemain < 2 || totalpemain > 10 || cin.fail())
-    {
-        cin.clear();
-        cin.ignore(100000, '\n');
-        cout << "Tidak valid. Masukkan lagi (2-10): ";
-        cin >> totalpemain;
-    }
-
-    for (int i = 0; i < totalpemain; i++)
-    {
-        cout << "Masukkan nama Pemain " << i + 1 << ": ";
-        cin >> daftarpemain[i].namapemain;
-        daftarpemain[i].sisakartu = 0;
-        daftarpemain[i].aktif = true;
-    }
-
-    dekkartu();
-
-    for (int i = 0; i < totalpemain; i++)
-    {
-        for (int j = 0; j < 7; j++)
-        {
-            daftarpemain[i].kartuditangan[daftarpemain[i].sisakartu] = ambilkartu();
-            daftarpemain[i].sisakartu++;
-        }
-    }
-
-    uno kartuawal = ambilkartu();
-    while (kartuawal.warna == "Wild")
-    {
-        kartuambil[sisakartuambil] = kartuawal;
-        sisakartuambil++;
-        kartuawal = ambilkartu();
-    }
-    kartuyangdibuang[jumlahkartubuang] = kartuawal;
-    jumlahkartubuang++;
-
-    string warnasekarang = kartuawal.warna;
-    string angkasekarang = kartuawal.angka;
-
-    int giliran = 0;
-    bool arahmain = true;
-    int sisapemain = totalpemain;
-    
-    .
-    .
-}
-
