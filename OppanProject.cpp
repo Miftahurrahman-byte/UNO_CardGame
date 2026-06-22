@@ -1,3 +1,30 @@
+else if (n == "Skip")
+    {
+        ascii[0] = "  #######  "; ascii[1] = " ##    /## "; ascii[2] = " ##   / ## "; ascii[3] = " ##  /  ## "; ascii[4] = " ## /   ## "; ascii[5] = " ##/    ## "; ascii[6] = "  #######  ";
+    }
+    else if (n == "Reverse")
+    {
+        ascii[0] = " #######   "; ascii[1] = " ##    ##  "; ascii[2] = " ##    ##  "; ascii[3] = " #######   "; ascii[4] = " ##  ##    "; ascii[5] = " ##   ##   "; ascii[6] = " ##    ##  ";
+    }
+    else if (n == "Draw Two")
+    {
+        ascii[0] = "           "; ascii[1] = "  #   #### "; ascii[2] = " ###     # "; ascii[3] = "  #   #### "; ascii[4] = "      #    "; ascii[5] = "      #### "; ascii[6] = "           ";
+    }
+    else if (n == "Wild Draw4")
+    {
+        ascii[0] = "           "; ascii[1] = "  #   #  # "; ascii[2] = " ###  #  # "; ascii[3] = "  #   #### "; ascii[4] = "         # "; ascii[5] = "         # "; ascii[6] = "           ";
+    }
+    else if (n == "Wild")
+    {
+        ascii[0] = " #        # "; ascii[1] = " #        # "; ascii[2] = " #    #   # "; ascii[3] = " #   ###  # "; ascii[4] = " # ## ## # "; ascii[5] = " ###   ### "; ascii[6] = " #        # ";
+    }
+    else
+    {
+        for (int i = 0; i < 7; i++)
+            ascii[i] = "           ";
+    }
+}
+
 void ditangan(pemain *p)
 {
     cout << "Kartu di tangan Anda:\n";
@@ -8,7 +35,6 @@ void ditangan(pemain *p)
     {
         int end = min(start + maxPerBaris, sisa);
 
-        // 1. Bagian Penomoran Kartu
         for (int i = start; i < end; i++)
         {
             if (i + 1 < 10)
@@ -18,21 +44,18 @@ void ditangan(pemain *p)
         }
         cout << "\n";
 
-        // 2. Garis Atas
         for (int i = start; i < end; i++)
         {
             cout << "++=============++  ";
         }
         cout << "\n";
 
-        // 3. Margin Kosong Atas
         for (int i = start; i < end; i++)
         {
             cout << "||             ||  ";
         }
         cout << "\n";
 
-        // 4. Body Kartu (Tengah)
         for (int baris = 0; baris < 7; baris++)
         {
             for (int i = start; i < end; i++)
@@ -48,14 +71,12 @@ void ditangan(pemain *p)
             cout << "\n";
         }
 
-        // 5. Margin Kosong Bawah
         for (int i = start; i < end; i++)
         {
             cout << "||             ||  ";
         }
         cout << "\n";
 
-        // 6. Garis Bawah
         for (int i = start; i < end; i++)
         {
             cout << "++=============++  ";
@@ -66,7 +87,6 @@ void ditangan(pemain *p)
     cout << sisa + 1 << ". [ AMBIL KARTU BARU DARI DEK ]\n";
 }
 
-// Menghapus kartu dari tangan array (MENGGUNAKAN POINTER PEMAIN)
 void hapuskartu(pemain *p, int indeksKartu)
 {
     for (int i = indeksKartu; i < p->sisakartu - 1; i++)
@@ -74,5 +94,4 @@ void hapuskartu(pemain *p, int indeksKartu)
         p->kartuditangan[i] = p->kartuditangan[i + 1];
     }
     p->sisakartu--;
-}
 }
